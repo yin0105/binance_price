@@ -3,13 +3,7 @@ from django.http import HttpResponse, JsonResponse
 import time
 from binance.websocket.spot.websocket_client import SpotWebsocketClient as Client
 
-price = {}
-my_client = Client()
-my_client.start()
 
-my_client.ticker(id=1, callback=message_handler)
-
-# Create your views here.
 def index(request, symbol):
     global price
 
@@ -24,3 +18,10 @@ def message_handler(message):
     global price
 
     price = message
+
+
+price = {}
+my_client = Client()
+my_client.start()
+
+my_client.ticker(id=1, callback=message_handler)

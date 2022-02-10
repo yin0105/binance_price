@@ -8,7 +8,7 @@ urlpatterns = [
 
 #   path('auto_bid', views.auto_bid, name="auto_bid"),
 #   path('get_fast', views.get_fast, name="get_fast"),
-    path('<slug:symbol>', views.index, name="margin"),
+    path('<slug:symbol>', views.index, name="get_price"),
 #   path('get_traits_list/<slug:slug>', views.get_traits_list, name="get_traits_list"),
 #   path('opensea_stop/<slug:slug>', views.opensea_stop, name="opensea_stop"),
 #   path('opensea_monitor', views.monitor_opensea_scan_status, name="opensea_monitor"),
