@@ -10,9 +10,9 @@ def index(request, symbol):
     global price_btcusdt, price_ethusdt
     
     if symbol == 'btcusdt':
-        return JsonResponse({'price': price_btcusdt})
+        return JsonResponse(price_btcusdt)
     elif symbol == 'ethusdt':
-        return JsonResponse({'price': price_ethusdt})
+        return JsonResponse(price_ethusdt)
     else:
         return JsonResponse({'price': 0})
 
